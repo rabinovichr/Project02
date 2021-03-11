@@ -1,3 +1,4 @@
 # Project02
 
-Read the WarringNations.docx file for rules of the game.
+Read the WarringNationsGame.docx file for rules of the game.
+
