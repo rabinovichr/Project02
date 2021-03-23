@@ -21,7 +21,7 @@ public class Nation
         nationLifePoints = lifePoints;
         for(int i = 0; i < 5; i++)
         {
-            this.tribes.add(new Tribe(nationName, "Tribe" + i, nationLifePoints / 5));
+            this.tribes.add(new Tribe(nationName, "Tribe" + i, nationLifePoints / 6));
         }
         population.addAll(getNationPopulation());
         livingPopulation.addAll(population);
