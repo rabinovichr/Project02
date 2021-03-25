@@ -3,6 +3,10 @@ package Project02;
 import Project02.People;
 import Project02.PeopleType;
 
+/**
+ * This class is one of the PeopleType of the tribe (Wizard)
+ * where you develop a encounter strategy.
+ */
 public class RobertWizard2 extends Project02.People{
     RobertWizard2(String nation, String tribe, int lifePoints)
     {
@@ -10,15 +14,21 @@ public class RobertWizard2 extends Project02.People{
         myDescription = "\tRobert Wizard";
     }
 
+    /**
+     * This class allow to the have a strategy for when you encounter another
+     * person through out the game.
+     * @param otherPerson
+     * @return the amount of life points after the encounter
+     */
     public int encounterStrategy(Project02.People otherPerson) {
         int lifePoints = 0;
         if (this.getNation() != otherPerson.getNation())
         {
             if (otherPerson.getLifePoints() < this.getLifePoints())
             {
-                if (otherPerson.getType() == PeopleType.warrior) // run away
+                if (otherPerson.getType() == PeopleType.warrior || otherPerson.getType() == PeopleType.healer)
                 {
-                    lifePoints = -this.getLifePoints();
+                    lifePoints = (int)(this.getLifePoints()/2);
                 }
                 else // attack a wizard
                 {

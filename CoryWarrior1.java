@@ -2,6 +2,10 @@ package Project02;
 
 import Project02.People;
 import Project02.PeopleType;
+/**
+ * This class is one of the PeopleType of the tribe (Warrior)
+ * where you develop a encounter strategy.
+ */
 
 public class CoryWarrior1 extends Project02.People
 {
@@ -10,6 +14,14 @@ public class CoryWarrior1 extends Project02.People
         super(nation, tribe, Project02.PeopleType.warrior, lifePoints);
         myDescription = "\tCory Warrior";
     }
+
+
+    /**
+     * This class allow to the have a strategy for when you encounter another
+     * person through out the game.
+     * @param otherPerson
+     * @return the amount of life points after the encounter
+     */
 
 
     public int encounterStrategy(Project02.People otherPerson)

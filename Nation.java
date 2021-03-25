@@ -8,13 +8,23 @@ import Project02.People;
 
 public class Nation
 {
+    /**
+     * This class allows you to manage the nation by adding the names of the nation,
+     * establishing all the tribe members, the entire population of the game, and
+     * and the living population at the end of the game.
+     */
     private int nationLifePoints;
     private String nationName;
     private ArrayList<Tribe> tribes = new ArrayList<>();
     private ArrayList<People> population = new ArrayList<>();
     private ArrayList<People> livingPopulation = new ArrayList<>();
 
-
+    /**
+     * This class instantiates the enitre nation with adding everyone that is
+     * inolved in the game which is the tribe members.
+     * @param name
+     * @param lifePoints
+     */
     public Nation(String name, int lifePoints)
     {
         nationName = name;
@@ -27,6 +37,12 @@ public class Nation
         livingPopulation.addAll(population);
     }
 
+    /**
+     * Puts all the members of the nation in one list
+     *
+     * @return all the memebers of the tribe that is still alive through out the
+     * game within the tribes.
+     */
 
     public ArrayList<People> getNationPopulation()
     {
@@ -45,11 +61,19 @@ public class Nation
         return livingPopulation;
     }
 
-
+    /**
+     * Gets the nations name
+     *
+     * @return the names of each nation
+     */
     public String getNationName()
     {
         return nationName;
     }
+
+    /**
+     * prints the status of the Tribe members within the game.
+     */
 
 
     public void printTribesStatus()

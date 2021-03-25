@@ -6,6 +6,10 @@ public class PlayGame
 {
     //private Random generator;
 
+    /**
+     * This class allows you to play the full game.
+     */
+
     public PlayGame()
     {
         World earth = new World();

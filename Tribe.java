@@ -8,6 +8,9 @@ import Project02.PeopleType;
 import Project02.SchaperWarrior;
 import Project02.SchaperWizard;
 
+/**
+ * This class involves everything that within the tribes of each nation
+ */
 
 public class Tribe
 {
@@ -18,6 +21,13 @@ public class Tribe
     private ArrayList<People> livingMembers = new ArrayList<>();
 
 
+    /**
+     * This class allows us to know the names of each nation, each tribe, and how many
+     * lifePoints are there.
+     * @param nation
+     * @param tribe
+     * @param lifePoints
+     */
     public Tribe(String nation, String tribe, int lifePoints)
     {
         nationName = nation;
@@ -60,6 +70,11 @@ public class Tribe
             livingMembers.addAll(members);
     }
 
+    /**
+     * Manages the list of the livingTribeMembers.
+     * @return livingMembers
+     */
+
     public ArrayList<People> getLivingTribeMembers()
     {
         livingMembers.clear();
@@ -94,16 +109,32 @@ public class Tribe
     }
 */
 
+    /**
+     * Manages how many people are in the tribe.
+     * @return the number of living members of the tribe
+     */
+
 
     public int getTribeSize()
     {
         return livingMembers.size();
     }
 
+
+    /**
+     * Manages if the tribe member alive
+     * @return tribeLifePoints greater than zero
+     */
     public Boolean isTribeAlive()
     {
         return (tribeLifePoints > 0);
     }
+
+
+    /**
+     * Manages how many life points the tribe has
+     * @return the tribes life points
+     */
 
 
     public int getTribeLifePoints()
@@ -111,6 +142,10 @@ public class Tribe
         return tribeLifePoints;
     }
 
+    /**
+     * Manages the name of the tribe
+     * @return name of the tribe
+     */
     public String getTribeName()
     {
         return tribeName;

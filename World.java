@@ -4,10 +4,16 @@ import Project02.Nation;
 import Project02.People;
 import java.util.*;
 
+
+/**
+ * The World class allows to manage of the game is played.
+ * Such as the total number of life points, number of rounds.
+ * It tells you the nation who won and all the survivors from that winning nation
+ */
 public class World
 {
     private final int worldLifePoints = 4000;
-    private final int numberOfRounds = 50;
+    private final int numberOfRounds = 75;
     private ArrayList<Nation> allNations = new ArrayList<>();
     private ArrayList<Nation> allLivingNations = new ArrayList<>();
 
@@ -19,12 +25,18 @@ public class World
 
     public World()
     {
-        // seed for psuedo-random number generator
+        /*
+         seed for psuedo-random number generator
+         */
         Date seed = new Date();
         generator = new Random(seed.getTime());
         createWorld();
         worldCreatedPeople.addAll(getWorldCreatedPopulation());
     }
+
+    /**
+     * This method shows the list of survivors at the end of the game.
+     */
 
     public void war()
         {
@@ -63,7 +75,10 @@ public class World
     }
 
 
-
+    /**
+     * This method allows to add all the nation that are going to be in the game
+     * and divid the points amongst the nations
+     */
     public void createWorld()
     {
         allNations.add(new Nation("RobertNation", (worldLifePoints / 3)));
@@ -73,10 +88,13 @@ public class World
     }
 
 
+    /**
+     * Adding all the living people from allNations to living people
+     * @return all the living people
+     */
     public ArrayList<People> getWorldCreatedPopulation()
     {
         ArrayList<People> livingPeople = new ArrayList<>();
-        // add all living people from allNations to livingPeople
         for(int nation = 0; nation < allNations.size(); nation++)
             livingPeople.addAll(allNations.get(nation).getNationPopulation());
         //System.out.println(livingPeople);
@@ -84,6 +102,11 @@ public class World
     }
 
 
+    /**
+     * Add all the survivors of the living people from all nations to living
+     * people to a list
+     * @return  all the survivors
+     */
     public ArrayList<Integer> getWorldSurvivingPeople()
     {
         ArrayList<Integer> survivors = new ArrayList<>();
@@ -97,7 +120,10 @@ public class World
         return survivors;
     }
 
-
+    /**
+     * get the surving nation at the end of the game
+     * @return the surviving nation.
+     */
     public Set<String> getSurvivingNations()
     {
         Set<String> survivingNations = new HashSet<>();
@@ -112,7 +138,11 @@ public class World
         return survivingNations;
     }
 
-
+    /**
+     * Manage the encounters between two people
+     * @param person1
+     * @param person2
+     */
     public void encounter(Integer person1, Integer person2)
     {
         Integer person1LifePointsToUse;
@@ -157,7 +187,10 @@ public class World
 
     }
 
-
+    /**
+     * Allows to play a round of the game
+     * @param combatants
+     */
     public void playOneRound(ArrayList<Integer> combatants)
     {
         System.out.println(combatants.size());
