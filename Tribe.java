@@ -1,12 +1,5 @@
 package Project02;
-import java.util.Collection;
-import java.util.Collections;
-import java.io.StringBufferInputStream;
 import java.util.ArrayList;
-import Project02.People;
-import Project02.PeopleType;
-import Project02.SchaperWarrior;
-import Project02.SchaperWizard;
 
 /**
  * This class involves everything that within the tribes of each nation
@@ -17,8 +10,8 @@ public class Tribe
     private String nationName;
     private String tribeName;
     private int tribeLifePoints;
-    private ArrayList<People> members = new ArrayList<>();
-    private ArrayList<People> livingMembers = new ArrayList<>();
+    private ArrayList<Project02.People> members = new ArrayList<>();
+    private ArrayList<Project02.People> livingMembers = new ArrayList<>();
 
 
     /**
@@ -37,31 +30,31 @@ public class Tribe
             if(i % 2 == 0) {
                 if (nationName == "CoryNation") {
                     members.add(new Project02.CoryWarrior1(nationName, tribeName, tribeLifePoints / 6));
-                    members.add(new Project02.CoryWarrior2(nationName, tribeName, tribeLifePoints / 6));
+
                     members.add(new Project02.CoryWizard1(nationName, tribeName, tribeLifePoints / 6));
-                    members.add(new Project02.CoryWizard2(nationName, tribeName, tribeLifePoints / 6));
+
                     members.add(new Project02.CoryHealer1(nationName, tribeName, tribeLifePoints / 6));
-                    members.add(new Project02.CoryHealer2(nationName, tribeName, tribeLifePoints / 6));
+
 
 
 
                 }
                 if (nationName == "RobertNation") {
                     members.add(new Project02.RobertWarrior(nationName, tribeName, tribeLifePoints / 6));
-                    members.add(new Project02.RobertWarrior2(nationName, tribeName, tribeLifePoints / 6));
+
                     members.add(new Project02.RobertWizard(nationName, tribeName, tribeLifePoints / 6));
-                    members.add(new Project02.RobertWizard2(nationName, tribeName, tribeLifePoints / 6));
+
                     members.add(new Project02.RobertHealer(nationName, tribeName, tribeLifePoints / 6));
-                    members.add(new Project02.RobertHealer2(nationName, tribeName, tribeLifePoints / 6));
+
 
                 }
                 if (nationName == "BenNation"){
                     members.add(new Project02.BenWarrior1(nationName, tribeName, tribeLifePoints / 6));
-                    members.add(new Project02.BenWarrior2(nationName, tribeName, tribeLifePoints / 6));
+
                     members.add(new Project02.BenWizard1(nationName, tribeName, tribeLifePoints / 6));
-                    members.add(new Project02.BenWizard2(nationName, tribeName, tribeLifePoints / 6));
+
                     members.add(new Project02.BenHealer1(nationName, tribeName, tribeLifePoints / 6));
-                    members.add(new Project02.BenHealer2(nationName, tribeName, tribeLifePoints / 6));
+
 
                 }
             }
@@ -75,7 +68,7 @@ public class Tribe
      * @return livingMembers
      */
 
-    public ArrayList<People> getLivingTribeMembers()
+    public ArrayList<Project02.People> getLivingTribeMembers()
     {
         livingMembers.clear();
         tribeLifePoints = 0;
