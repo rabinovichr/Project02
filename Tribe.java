@@ -26,6 +26,12 @@ public class Tribe
         nationName = nation;
         tribeName = tribe;
         tribeLifePoints = lifePoints;
+        if (nationName == "Artifacts"){
+            members.add(new Project02.TrainArtifact(nationName, tribeName, tribeLifePoints ));
+            members.add(new Project02.WeaponArtifact(nationName, tribeName, tribeLifePoints));
+            members.add(new Project02.ShieldArtifact(nationName, tribeName, tribeLifePoints));
+            members.add(new Project02.BoobyTrapArtifact(nationName, tribeName, tribeLifePoints));
+        }
         for(int i = 0; i < 5; i++)
             if(i % 2 == 0) {
                 if (nationName == "CoryNation") {
@@ -53,10 +59,11 @@ public class Tribe
 
                     members.add(new Project02.BenWizard1(nationName, tribeName, tribeLifePoints / 6));
 
-                    members.add(new Project02.BenHealer1(nationName, tribeName, tribeLifePoints / 6));
+                    members.add(new Project02.BenHealer1(nationName, tribeName, tribeLifePoints / 6, 2));
 
 
                 }
+
             }
 
         for(int i = 0; i < members.size(); i++)

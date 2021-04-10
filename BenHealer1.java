@@ -9,9 +9,10 @@ import Project02.PeopleType;
  */
 public class BenHealer1 extends Project02.People {
 
-    BenHealer1(String nation, String tribe, int lifePoints) {
+    BenHealer1(String nation, String tribe, int lifePoints, int damage) {
         super(nation, tribe, PeopleType.healer, lifePoints);
         myDescription = "\tBen Healer1";
+        damage = damage;
     }
 
 
@@ -37,6 +38,21 @@ public class BenHealer1 extends Project02.People {
             } else {
                 lifePoints = 0;
             }
+        }
+        if(otherPerson.getNation() == "Artifacts"){
+            if(otherPerson.getType() == PeopleType.mentors){
+                damage += 5;
+            }
+            if(otherPerson.getType() == PeopleType.boobytrap){
+                lifePoints = 0;
+            }
+            if(otherPerson.getType() == PeopleType.shield){
+                lifePoints = lifePoints;
+            }
+            if(otherPerson.getType() == PeopleType.weapon){
+                damage += 10;
+            }
+
         }
         return lifePoints;
     }

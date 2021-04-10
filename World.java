@@ -13,6 +13,7 @@ import java.util.*;
 public class World
 {
     private final int worldLifePoints = 10000;
+    private final int artifactLifePoints = 8;
     private final int numberOfRounds = 75;
     private ArrayList<Nation> allNations = new ArrayList<>();
     private ArrayList<Nation> allLivingNations = new ArrayList<>();
@@ -83,6 +84,7 @@ public class World
         allNations.add(new Nation("RobertNation", (worldLifePoints / 3)));
         allNations.add(new Nation("CoryNation", (worldLifePoints) / 3));
         allNations.add(new Nation("BenNation", (worldLifePoints) / 3));
+        allNations.add(new Nation("Artifacts", (artifactLifePoints)));
 
     }
 

@@ -42,6 +42,7 @@ public class BenWarrior1 extends People {
                 lifepoints = this.getLifePoints();
             }
         }
+        \
         return lifepoints;
     }
 

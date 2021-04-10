@@ -11,6 +11,7 @@ public abstract class People
     protected String myDescription;
     private int myLifePoints;
     private boolean dead;
+    public int damage;
 
 
     /**
@@ -32,6 +33,7 @@ public abstract class People
         myDescription = me.getDescription();
         myLifePoints = lifePoints;
         dead = false;
+        damage = 0;
     }
 
     /**
@@ -108,6 +110,10 @@ public abstract class People
      * This methods allows you to moditify the life points as the game progress
      * @param points
      */
+    public int getDamage(){ return damage;}
+    public void setDamage(){
+        this.damage = damage;
+    }
 
     public void modifyLifePoints(int points)
     {
