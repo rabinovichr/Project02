@@ -10,7 +10,7 @@ public enum PeopleType
     //Trained peopletype for 1 round, damage +5
     mentors ("Trained by Liam Neeson"),
     //For warrior add damage +10
-    weapon ("Found Titanium Sword"),
+    poisonpotion ("Drank Bleach"),
     //Once chosen, immune from damage that round
     shield ("Found Golden Shield"),
     //Instakill

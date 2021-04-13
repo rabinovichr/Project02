@@ -10,7 +10,7 @@ import Project02.PeopleType;
 public class ShieldArtifact extends Project02.People {
 
     ShieldArtifact(String nation, String tribe, int lifePoints) {
-        super(nation, tribe, PeopleType.mentors, lifePoints);
+        super(nation, tribe, PeopleType.shield, lifePoints);
         myDescription = "\tProtected by Shield";
     }
 
@@ -25,9 +25,8 @@ public class ShieldArtifact extends Project02.People {
         int lifePoints = 0;
         //If nations are equal and both are mentors run away
         if (this.getNation() == otherPerson.getNation()) {
-            if (otherPerson.getType() == PeopleType.shield) {
                 lifePoints = -this.getLifePoints();
-            }
+
 
         }
         else

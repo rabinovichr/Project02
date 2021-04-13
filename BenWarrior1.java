@@ -8,42 +8,64 @@ import Project02.PeopleType;
  */
 public class BenWarrior1 extends People {
 
-    public BenWarrior1(String nation, String tribe, int lifepoints) {
-        super(nation, tribe, PeopleType.warrior, lifepoints);
+    public BenWarrior1(String nation, String tribe, int lifePoints) {
+        super(nation, tribe, PeopleType.warrior, lifePoints);
         myDescription = "\tBen Warrior";
     }
 
     /**
      * This class allow to the have a strategy for when you encounter another
      * person through out the game.
+     *
      * @param otherPerson
      * @return the amount of life points after the encounter
      */
 
     public int encounterStrategy(People otherPerson) {
-        int lifepoints = 0;
+        int lifePoints = 0;
         if (this.getNation() == otherPerson.getNation()) {
             if (otherPerson.getLifePoints() < this.getLifePoints()) {
                 if (otherPerson.getTribe() == this.getTribe()) {
-                    lifepoints = -((this.getLifePoints() - otherPerson.getLifePoints()) / 8);
-                }
-                else {
-                    lifepoints = -((this.getLifePoints() - otherPerson.getLifePoints()) / 4);
+                    lifePoints = -((this.getLifePoints() - otherPerson.getLifePoints()) / 8);
+                } else {
+                    lifePoints = -((this.getLifePoints() - otherPerson.getLifePoints()) / 4);
                 }
             }
-        }
-        else {
+        } else {
             int points;
             points = this.getLifePoints() - otherPerson.getLifePoints();
             if (points > 0) {
-                lifepoints = otherPerson.getLifePoints();
+                lifePoints = otherPerson.getLifePoints();
+            } else {
+                lifePoints = this.getLifePoints();
             }
-            else {
-                lifepoints = this.getLifePoints();
-            }
-        }
-        \
-        return lifepoints;
-    }
+            if(otherPerson.getNation() == "Artifacts"){
+                if(otherPerson.getType() == PeopleType.mentors){
+                    this.modifyLifePoints(5);
+                    System.out.println(this.myDescription + " trained by Liam Neeson, new life points: " + this.getLifePoints());
+                }
+                if(otherPerson.getType() == PeopleType.boobytrap){
+                    this.modifyLifePoints(this.getLifePoints() - 1000);
+                    System.out.println(this.myDescription + " fell and can't get up, new life points: 0");
+                }
+                if(otherPerson.getType() == PeopleType.shield){
+                    if(this.getLifePoints() <= 90) {
+                        this.modifyLifePoints(10);
+                    }
+                    else
+                        this.modifyLifePoints(100 - this.getLifePoints());
+                    System.out.println(this.myDescription + " protected by shield, new life points:  " + this.getLifePoints());
+                }
+                if(otherPerson.getType() == PeopleType.poisonpotion){
+                    this.modifyLifePoints(-10);
+                    System.out.println(this.myDescription + " drank poison, new life points: " + this.getLifePoints());
+                }
 
+            }
+
+
+        }
+
+        return lifePoints;
+    }
 }

@@ -9,10 +9,10 @@ import Project02.PeopleType;
  */
 public class BenHealer1 extends Project02.People {
 
-    BenHealer1(String nation, String tribe, int lifePoints, int damage) {
+    BenHealer1(String nation, String tribe, int lifePoints) {
         super(nation, tribe, PeopleType.healer, lifePoints);
         myDescription = "\tBen Healer1";
-        damage = damage;
+
     }
 
 
@@ -41,16 +41,24 @@ public class BenHealer1 extends Project02.People {
         }
         if(otherPerson.getNation() == "Artifacts"){
             if(otherPerson.getType() == PeopleType.mentors){
-                damage += 5;
+                this.modifyLifePoints(5);
+                System.out.println(this.myDescription + " trained by Liam Neeson, new life points: " + this.getLifePoints());
             }
             if(otherPerson.getType() == PeopleType.boobytrap){
-                lifePoints = 0;
+                this.modifyLifePoints(this.getLifePoints() - 1000);
+                System.out.println(this.myDescription + " fell and can't get up, new life points: 0");
             }
             if(otherPerson.getType() == PeopleType.shield){
-                lifePoints = lifePoints;
+                if(this.getLifePoints() <= 90) {
+                    this.modifyLifePoints(10);
+                }
+                else
+                    this.modifyLifePoints(100 - this.getLifePoints());
+                System.out.println(this.myDescription + " protected by shield, new life points:  " + this.getLifePoints());
             }
-            if(otherPerson.getType() == PeopleType.weapon){
-                damage += 10;
+            if(otherPerson.getType() == PeopleType.poisonpotion){
+                this.modifyLifePoints(-10);
+                System.out.println(this.myDescription + " drank poison, new life points: " + this.getLifePoints());
             }
 
         }

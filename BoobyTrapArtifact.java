@@ -10,7 +10,7 @@ import Project02.PeopleType;
 public class BoobyTrapArtifact extends Project02.People {
 
     BoobyTrapArtifact(String nation, String tribe, int lifePoints) {
-        super(nation, tribe, PeopleType.mentors, lifePoints);
+        super(nation, tribe, PeopleType.boobytrap, lifePoints);
         myDescription = "\tInstaKilled";
     }
 
@@ -25,13 +25,13 @@ public class BoobyTrapArtifact extends Project02.People {
     public int encounterStrategy(Project02.People otherPerson) {
         int lifePoints = 0;
         if (this.getNation() == otherPerson.getNation()) {
-            if (otherPerson.getType() == PeopleType.mentors) {
-                lifePoints = -this.getLifePoints();
-            }
-        } else {
-            lifePoints = 0;
+            lifePoints = -this.getLifePoints();
+
 
         }
-        return(0);
+        else
+            return 0;
+        return lifePoints;
+
     }
 }

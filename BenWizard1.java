@@ -31,6 +31,30 @@ public class BenWizard1 extends Project02.People {
                     lifePoints = -this.getLifePoints(); // run away if it's against another wizard.
                 }
             }
+
+        }
+        if(otherPerson.getNation() == "Artifacts"){
+            if(otherPerson.getType() == PeopleType.mentors){
+                this.modifyLifePoints(5);
+                System.out.println(this.myDescription + " trained by Liam Neeson, new life points: " + this.getLifePoints());
+            }
+            if(otherPerson.getType() == PeopleType.boobytrap){
+                this.modifyLifePoints(this.getLifePoints() - 1000);
+                System.out.println(this.myDescription + " fell and can't get up, new life points: 0");
+            }
+            if(otherPerson.getType() == PeopleType.shield){
+                if(this.getLifePoints() <= 90) {
+                    this.modifyLifePoints(10);
+                }
+                else
+                    this.modifyLifePoints(100 - this.getLifePoints());
+                System.out.println(this.myDescription + " protected by shield, new life points:  " + this.getLifePoints());
+            }
+            if(otherPerson.getType() == PeopleType.poisonpotion){
+                this.modifyLifePoints(-10);
+                System.out.println(this.myDescription + " drank poison, new life points: " + this.getLifePoints());
+            }
+
         }
         return lifePoints;
     }

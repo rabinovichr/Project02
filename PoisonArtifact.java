@@ -7,11 +7,11 @@ import Project02.PeopleType;
  * This class is one of the PeopleType of the tribe (healer)
  * where you develop a encounter strategy.
  */
-public class TrainArtifact extends Project02.People {
+public class PoisonArtifact extends Project02.People {
 
-    TrainArtifact(String nation, String tribe, int lifePoints) {
-        super(nation, tribe, PeopleType.mentors, lifePoints);
-        myDescription = "\tTrained by Liam Neesen";
+    PoisonArtifact(String nation, String tribe, int lifePoints) {
+        super(nation, tribe, PeopleType.poisonpotion, lifePoints);
+        myDescription = "\tDrank poison";
     }
 
 
