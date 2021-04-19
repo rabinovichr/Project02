@@ -151,6 +151,11 @@ public class Tribe
         return tribeName;
     }
 
+    /**
+     * Prints out a string which are tribe members.
+     * @return result
+     */
+
     public String toString()
     {
         String result = "\0";
