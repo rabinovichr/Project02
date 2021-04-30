@@ -14,12 +14,13 @@ public class World
 {
     private final int worldLifePoints = 10000;
     private final int artifactLifePoints = 8;
-    private final int numberOfRounds = 75;
+    private static final int numberOfRounds = 75;
     private ArrayList<Nation> allNations = new ArrayList<>();
     private ArrayList<Nation> allLivingNations = new ArrayList<>();
     Project02.Dice dice = new Project02.Dice(6);
     Random generator;
     ArrayList<People> worldCreatedPeople = new ArrayList<>();
+
 
 
 
@@ -121,6 +122,10 @@ public class World
         return survivors;
     }
 
+    public static int getNumberOfRounds(){
+        return numberOfRounds;
+    }
+
     /**
      * get the surving nation at the end of the game
      * @return the surviving nation.
@@ -198,7 +203,7 @@ public class World
         ArrayList<Integer> survivors = new ArrayList<>();
         Integer numberOfCombatants;
         Collections.shuffle(combatants);
-        numberOfCombatants = combatants.size() - 1;
+        numberOfCombatants = combatants.size()-1;
         Integer combatantIndex = 0;
         while(combatantIndex < numberOfCombatants)
         {
