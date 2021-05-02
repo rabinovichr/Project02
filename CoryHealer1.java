@@ -15,7 +15,7 @@ public class CoryHealer1 extends Project02.People {
 
 
     /**
-     * This method allow you to the have a strategy for when you encounter another
+     * This class allow to the have a strategy for when you encounter another
      * person through out the game.
      * @param otherPerson
      * @return the amount of life points after the encounter
