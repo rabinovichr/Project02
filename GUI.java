@@ -8,6 +8,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 
+/**
+ * This is the graphic interface class where we will implement the games into the interface.
+ */
+
+
 public class GUI extends Project02.Main implements ActionListener {
 
     public static boolean RIGHT_TO_LEFT = false;
@@ -15,6 +20,10 @@ public class GUI extends Project02.Main implements ActionListener {
     public static JFrame welcome_frame = new JFrame();
     public static JFrame game_frame = new JFrame("Warring Nations");
 
+
+    /**
+     * This method creates all the button and frames for the GUI
+     */
 
 
     public static void createWelcomeGui() {
@@ -51,7 +60,10 @@ public class GUI extends Project02.Main implements ActionListener {
         welcome_frame.add(artifact4);
         welcome_frame.add(next_button);
         next_button.addActionListener(new ActionListener() {
-
+            /**
+             * ActionListeners must be used to change JFrames.
+             * @param e
+             */
             @Override
             public void actionPerformed(ActionEvent e) {
                 welcome_frame.setVisible(false);
@@ -71,6 +83,13 @@ public class GUI extends Project02.Main implements ActionListener {
     }
 
 
+    /**
+     * This method implements the images on each frame that we use for the GUI
+     * @param srcImg
+     * @param w
+     * @param h
+     * @return the images to display on the JFrames.
+     */
     public Image getScaledImage(Image srcImg, int w, int h) {
         BufferedImage resizedImg = new BufferedImage(w, h, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g2 = resizedImg.createGraphics();
@@ -82,6 +101,10 @@ public class GUI extends Project02.Main implements ActionListener {
         return resizedImg;
     }
 
+    /**
+     * This method lets you format each frame and where you want each button and image to go through out the frame.
+     * @param pane
+     */
     public static void addComponentsToPane(Container pane) {
 
         if (!(pane.getLayout() instanceof BorderLayout)) {
@@ -119,7 +142,9 @@ public class GUI extends Project02.Main implements ActionListener {
         pane.add(person2_button, BorderLayout.LINE_END);
     }
 
-
+    /**
+     * This method makes sure the game_frame is displayed correctly and visible.
+     */
     public static void createAndShowGameGUI() {
 
         //Create and set up the window.
