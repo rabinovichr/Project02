@@ -4,7 +4,7 @@ import Project02.PeopleType;
 
 
 /**
- * This class is one of the PeopleType of the tribe (healer)
+ * This class is one of the ArtifactType of the tribe (BootyTrap)
  * where you develop a encounter strategy.
  */
 public class BoobyTrapArtifact extends Project02.People {
@@ -16,9 +16,7 @@ public class BoobyTrapArtifact extends Project02.People {
 
 
     /**
-     * This class allow to the have a strategy for when you encounter another
-     * person through out the game.
-     *
+     *This method allows you to the have a strategy for when you encounter another person through out the game.
      * @param otherPerson
      * @return the amount of life points after the encounter
      */

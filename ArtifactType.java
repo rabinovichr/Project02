@@ -1,6 +1,9 @@
 package Project02;
 
 
+/*
+This class will describe each ArtifactType
+ */
 public enum ArtifactType {
 
     //No artifacts found, damage as dice roll
@@ -21,17 +24,16 @@ public enum ArtifactType {
      * Sets the string type to description.
      * @param types
      */
-
     ArtifactType (String types)
     {
         description = types;
     }
 
+
     /**
-     * Shows a descriptions of what PeopleType it is
+     * Shows a descriptions of what ArtifactType it is
      * @return description
      */
-
     public String getDescription()
     {
         return description;
