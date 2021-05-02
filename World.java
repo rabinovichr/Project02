@@ -21,6 +21,7 @@ public class World
     Random generator;
     ArrayList<People> worldCreatedPeople = new ArrayList<>();
 
+    Project02.GUI gui = new Project02.GUI();
 
 
 

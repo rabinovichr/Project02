@@ -28,7 +28,47 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.GUI (1)">
+    <configuration name="BorderLayoutDemo (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BorderLayoutDemo" />
+      <module name="Project02_Dev" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BorderLayoutDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="layout.BorderLayoutDemo" />
+      <module name="Project02_Dev" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="layout.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GUI (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project02.GUI" />
+      <module name="Project02_Dev" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Project02.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GUI" />
+      <module name="Project02_Dev" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Project02.Main" />
       <module name="Project02_Dev" />
@@ -44,7 +84,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GUI (1)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.GUI" />
+        <item itemvalue="Application.BorderLayoutDemo (1)" />
+        <item itemvalue="Application.BorderLayoutDemo" />
       </list>
     </recent_temporary>
   </component>
